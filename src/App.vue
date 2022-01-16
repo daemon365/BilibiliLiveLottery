@@ -63,11 +63,10 @@ export default {
       this.currentStep ++;
     },
     onDanmu: function (userInfo) {
-      if (this.recording && !this.involvedUid.includes(userInfo[2][0])){
-        if (this.involvedUid.indexOf(userInfo[0].toString()) === -1) {
+      // console.log(userInfo);
+      if (this.recording && !this.involvedUid.includes(userInfo[0])){
           this.involvedUid.push(userInfo[0].toString());
           this.involvedUname[userInfo[0]] = userInfo[1];
-        }
       }
     },
     connectWs: function () {
