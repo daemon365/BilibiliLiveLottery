@@ -64,9 +64,10 @@ export default {
     },
     onDanmu: function (userInfo) {
       if (this.recording && !this.involvedUid.includes(userInfo[2][0])){
-        // console.log("--userInfo",userInfo[0],typeof userInfo[2][0]);
-        this.involvedUid.push(userInfo[0].toString());
-        this.involvedUname[userInfo[0]] = userInfo[1];
+        if (this.involvedUid.indexOf(userInfo[0].toString()) === -1) {
+          this.involvedUid.push(userInfo[0].toString());
+          this.involvedUname[userInfo[0]] = userInfo[1];
+        }
       }
     },
     connectWs: function () {
