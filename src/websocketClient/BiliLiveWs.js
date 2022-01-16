@@ -4,7 +4,7 @@ function connect(roomid, danmuCllback) {
   const live = new LiveWS(roomid);
   
   live.on('DANMU_MSG', (data) => {
-    console.log("data",data);
+    // console.log("data",data);
     danmuCllback(data['info'][2])
   })
 }
