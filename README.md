@@ -1,3 +1,5 @@
+# fork by
+- https://github.com/kdxcxs/BilibiliLiveLottery
 # Bilibili Live Lottery
 
 ![LICENSE](https://img.shields.io/github/license/kdxcxs/BilibiliLiveLottery)
