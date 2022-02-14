@@ -64,7 +64,7 @@ export default {
     },
     onDanmu: function (userInfo) {
       // console.log(userInfo);
-      if (this.recording && !this.involvedUid.includes(userInfo[0])){
+      if (this.recording && !this.involvedUid.includes(userInfo[0].toString())){
           this.involvedUid.push(userInfo[0].toString());
           this.involvedUname[userInfo[0]] = userInfo[1];
       }
